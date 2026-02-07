@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <title>Camala | Externalisation des marchés publics pour TPE</title>
+  <meta name="description" content="Camala accompagne les TPE : veille ciblée, analyse du DCE, rédaction du mémoire technique et dépôt des offres. Vous gardez la main sur le chiffrage." />
+  <link rel="canonical" href="https://votre-domaine.fr/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Camala | Marchés publics pour TPE" />
+  <meta property="og:description" content="Veille, analyse, rédaction, dépôt : Camala agit comme votre service marchés publics externalisé." />
+  <meta property="og:url" content="https://votre-domaine.fr/" />
+  <meta property="og:image" content="https://votre-domaine.fr/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json" id="jsonld"></script>
+
+  <style>
+    :root{
+      --primary:#0f172a;
+      --accent:#f59e0b;
+      --text:#0f172a;
+      --muted:#475569;
+      --bg:#f8fafc;
+      --white:#ffffff;
+      --radius:18px;
+      --shadow:0 18px 50px rgba(2,6,23,.10);
+      --shadow2:0 10px 28px rgba(2,6,23,.08);
+      --max:1160px;
+      --space:4.8rem;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      line-height:1.6;
+      background: radial-gradient(900px 450px at 50% -5%, rgba(245,158,11,.12), transparent 60%), #fff;
+    }
+    a{color:inherit;text-decoration:none}
+    a:hover{color:var(--accent)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    .section{padding:var(--space) 0}
+    .section.alt{background:var(--bg)}
+    .section-title{text-align:center;margin-bottom:2.6rem}
+    .section-title h1,.section-title h2{letter-spacing:-.8px}
+    .section-title h2{font-size:2.35rem;margin-bottom:.75rem}
+    .section-title p{max-width:820px;margin:0 auto;color:var(--muted)}
+    .skip{position:absolute;left:-999px;top:10px;background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;font-weight:900;z-index:9999}
+    .skip:focus{left:10px}
+
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:rgba(255,255,255,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(2,6,23,.08);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:14px}
+    .logo{font-weight:950;letter-spacing:-1px;font-size:1.35rem}
+    .logo span{color:var(--accent)}
+    nav ul{list-style:none;display:flex;gap:18px;align-items:center}
+    nav a{font-weight:900;color:var(--primary)}
+    .cta{display:flex;gap:10px;align-items:center}
+    .hamb{display:none;background:transparent;border:0;cursor:pointer;padding:10px;border-radius:12px;font-size:1.2rem}
+    .hamb:focus{outline:3px solid rgba(245,158,11,.35);outline-offset:2px}
+
+    .btn{
+      display:inline-block;padding:12px 16px;border-radius:14px;
+      font-weight:950;text-transform:uppercase;font-size:.82rem;
+      letter-spacing:.6px;border:0;cursor:pointer;transition:.2s;
+      white-space:nowrap;
+    }
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 24px rgba(245,158,11,.25)}
+    .btn-primary:hover{background:#d97706;transform:translateY(-2px)}
+    .btn-outline{background:transparent;border:2px solid rgba(15,23,42,.18);color:var(--primary)}
+    .btn-outline:hover{border-color:rgba(15,23,42,.35)}
+
+    .hero{
+      min-height:92vh;padding-top:78px;display:flex;align-items:center;text-align:center;color:#fff;
+      background:
+        radial-gradient(900px 450px at 50% 0%, rgba(245,158,11,.22), transparent 60%),
+        linear-gradient(180deg, rgba(15,23,42,.96), rgba(15,23,42,.78));
+    }
+    .hero h1{font-size:3.15rem;line-height:1.06;font-weight:980;letter-spacing:-1px;margin-bottom:1rem}
+    .hero p{font-size:1.15rem;max-width:900px;margin:0 auto 1.6rem;opacity:.95}
+    .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:1.4rem}
+    .badge{font-size:.9rem;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
+    .proofs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:1.4rem}
+    .pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);padding:10px 12px;border-radius:999px;font-weight:900;color:#fff;font-size:.9rem}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+    .card{
+      background:#fff;border-radius:var(--radius);box-shadow:var(--shadow2);
+      border:1px solid rgba(2,6,23,.06);
+      padding:1.5rem;position:relative;
+    }
+    .card:before{
+      content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+      background:linear-gradient(180deg,var(--accent),rgba(245,158,11,.18));
+      border-radius:18px 0 0 18px;
+    }
+    .icon{
+      width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
+      background:rgba(15,23,42,.07);color:var(--primary);font-weight:980;margin:0 0 1rem 6px;
+    }
+    .card .k{font-weight:980;color:var(--primary);margin-bottom:.4rem}
+    .card p{color:var(--muted)}
+
+    .split{display:flex;gap:2.2rem;flex-wrap:wrap;align-items:flex-start}
+    .panel{
+      flex:1;min-width:320px;background:#fff;border-radius:var(--radius);
+      box-shadow:var(--shadow);border:1px solid rgba(2,6,23,.06);
+      padding:1.6rem;
+    }
+    .panel h3{letter-spacing:-.4px;margin-bottom:.6rem}
+    .panel p{color:var(--muted)}
+    .list{list-style:none;margin-top:1rem}
+    .list li{display:flex;gap:10px;margin:.8rem 0;color:var(--muted)}
+    .tick{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:rgba(245,158,11,.18);color:#b45309;font-weight:980;flex:0 0 auto;margin-top:2px}
+
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2rem}
+    .step{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow2);border:1px solid rgba(2,6,23,.06);padding:1.3rem;text-align:center}
+    .num{width:52px;height:52px;border-radius:999px;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:980;margin:0 auto 1rem}
+    .step h3{letter-spacing:-.4px;margin-bottom:.35rem}
+    .step p{color:var(--muted);font-size:.95rem}
+
+    .ctaBox{background:linear-gradient(135deg, rgba(245,158,11,.12), rgba(15,23,42,.04));border:1px solid rgba(2,6,23,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.8rem;text-align:center}
+    .ctaBox h3{letter-spacing:-.6px;margin-bottom:.5rem}
+    .ctaBox p{color:var(--muted);max-width:820px;margin:0 auto 1rem}
+
+    input,textarea{
+      width:100%;padding:14px;border:1px solid rgba(2,6,23,.12);
+      border-radius:14px;font:inherit;background:#fff;
+    }
+    textarea{min-height:120px;resize:vertical}
+    label{display:block;font-weight:950;margin:10px 0 6px}
+    .formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .fine{color:var(--muted);font-size:.85rem;margin-top:.8rem;line-height:1.35}
+    .fine a{text-decoration:underline}
+
+    footer{background:linear-gradient(180deg,#0b1224,#0f172a);color:#94a3b8;padding:2.6rem 0;font-size:.95rem}
+    .footerLinks{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:.8rem}
+    footer a{color:#cbd5e1;text-decoration:underline}
+
+    .cookie{
+      position:fixed;left:16px;right:16px;bottom:16px;max-width:980px;margin:0 auto;z-index:2000;
+      background:rgba(255,255,255,.96);border:1px solid rgba(2,6,23,.10);border-radius:16px;
+      box-shadow:var(--shadow2);padding:14px;display:none;
+    }
+    .cookieRow{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+    .cookie p{color:var(--muted);font-size:.92rem;max-width:720px}
+    .btn-mini{padding:10px 14px;border-radius:12px;font-size:.8rem}
+    .btn-dark{background:var(--primary);color:#fff}
+    .btn-ghost{background:transparent;border:2px solid rgba(2,6,23,.14);color:var(--primary)}
+    .btn-ghost:hover{border-color:rgba(2,6,23,.30)}
+
+    @media (max-width:900px){ .steps{grid-template-columns:1fr 1fr} }
+    @media (max-width:768px){
+      .hero h1{font-size:2.35rem}
+      nav ul{
+        display:none;position:absolute;top:78px;left:0;right:0;
+        background:rgba(255,255,255,.98);padding:16px 18px;flex-direction:column;gap:14px;
+        border-bottom:1px solid rgba(2,6,23,.06);
+      }
+      nav ul.active{display:flex}
+      .hamb{display:block}
+      .steps{grid-template-columns:1fr}
+      .formgrid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<script>
+  const SETTINGS = {
+    siteUrl: "https://votre-domaine.fr/",
+    brand: "CAMALA",
+    email: "camala.conseil@gmail.com",
+    formAction: "https://formspree.io/f/xwvnkeda"
+  };
+
+  document.getElementById("jsonld").textContent = JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name": SETTINGS.brand,
+    "url": SETTINGS.siteUrl || undefined,
+    "areaServed":"FR",
+    "email": SETTINGS.email,
+    "serviceType":"Externalisation marchés publics"
+  });
+</script>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="Accueil">CAMALA<span>.</span></a>
+
+    <nav aria-label="Navigation principale">
+      <ul id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="offre.html">Offre</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="mentions-legales.html">Légal</a></li>
+      </ul>
+    </nav>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="#contact">Échanger</a>
+      <button class="hamb" id="hamb" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+  <section class="hero">
+    <div class="container">
+      <h1>Externalisez vos marchés publics.<br>Gagnez du temps. Gagnez des marchés.</h1>
+      <p>
+        Camala accompagne les TPE : veille ciblée, analyse du DCE, rédaction du mémoire technique et dépôt des offres.
+        Vous gardez la main sur le chiffrage.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Demander un échange</a>
+        <a class="btn btn-outline" href="offre.html">Voir l’offre</a>
+      </div>
+
+      <div class="badges" aria-label="Points forts">
+        <span class="badge">Spécialiste TPE</span>
+        <span class="badge">Go / No-Go</span>
+        <span class="badge">Hors chiffrage</span>
+      </div>
+
+      <div class="proofs" aria-label="Réassurance">
+        <span class="pill">Dossiers conformes</span>
+        <span class="pill">Mémoire technique structuré</span>
+        <span class="pill">Dépôt sécurisé</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Pourquoi les TPE renoncent</h2>
+        <p>La commande publique est rentable… mais seulement si on a une méthode et du temps. Camala vous redonne les deux.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">📄</div>
+          <div class="k">Complexité administrative</div>
+          <p>RC, CCTP, DUME, DC1/DC2… et le risque d’élimination sur un oubli.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⏳</div>
+          <div class="k">Manque de temps</div>
+          <p>Entre l’opérationnel et la gestion, répondre devient un “projet du dimanche”.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎯</div>
+          <div class="k">Manque de méthode</div>
+          <p>Sans mémoire technique solide, tu réponds “dans le vide”, et tu le paies en heures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ce que Camala fait (et ne fait pas)</h2>
+        <p>Cadre clair : tu gardes tes prix, on sécurise et on optimise le dossier.</p>
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <h3>Ce que Camala fait</h3>
+          <p>On produit un dossier conforme et orienté “critères de jugement”.</p>
+          <ul class="list">
+            <li><span class="tick">✓</span> Veille ciblée (métier/zone)</li>
+            <li><span class="tick">✓</span> Analyse RC/CCTP + critères</li>
+            <li><span class="tick">✓</span> Rédaction administratif + mémoire technique</li>
+            <li><span class="tick">✓</span> Dépôt & suivi plateformes</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Ce que Camala ne fait pas</h3>
+          <p>On ne touche pas à tes marges.</p>
+          <ul class="list">
+            <li><span class="tick">✓</span> Pas de chiffrage à ta place</li>
+            <li><span class="tick">✓</span> Pas de dossiers “copier-coller”</li>
+            <li><span class="tick">✓</span> Pas de réponse “au hasard” : Go/No-Go d’abord</li>
+          </ul>
+          <p style="margin-top:.9rem;color:var(--muted)">👉 Tu gardes la main. On fait gagner du temps et des points.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Le process en 4 étapes</h2>
+        <p>Simple : tu valides les Go/No-Go, on produit, on dépose. Zéro friction.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Cadrage</h3><p>Critères, zone, taille, objectifs.</p></div>
+        <div class="step"><div class="num">2</div><h3>Go/No-Go</h3><p>Tu choisis les opportunités.</p></div>
+        <div class="step"><div class="num">3</div><h3>Production</h3><p>Dossier + mémoire technique.</p></div>
+        <div class="step"><div class="num">4</div><h3>Dépôt</h3><p>Envoi et suivi sécurisés.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="contact">
+    <div class="container">
+      <div class="ctaBox">
+        <h3>Échange gratuit</h3>
+        <p>Tu me dis ton métier et ta zone. Je te dis si ça vaut le coup (et si ce n’est pas le cas, je te le dis aussi).</p>
+
+        <form id="leadForm" method="POST" style="max-width:640px;margin:1.2rem auto 0;text-align:left">
+          <div class="formgrid">
+            <div>
+              <label for="nom">Nom *</label>
+              <input id="nom" name="nom" required autocomplete="name" />
+            </div>
+            <div>
+              <label for="societe">Société</label>
+              <input id="societe" name="societe" autocomplete="organization" />
+            </div>
+          </div>
+
+          <div class="formgrid">
+            <div>
+              <label for="email">Email *</label>
+              <input id="email" type="email" name="email" required autocomplete="email" />
+            </div>
+            <div>
+              <label for="tel">Téléphone</label>
+              <input id="tel" name="tel" autocomplete="tel" />
+            </div>
+          </div>
+
+          <label for="besoin">Votre besoin *</label>
+          <textarea id="besoin" name="besoin" required placeholder="Ex : plomberie / Côte-d'Or / marchés < 200k / besoin mémoire technique"></textarea>
+
+          <input type="text" name="_gotcha" style="display:none" />
+          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:12px">Envoyer</button>
+
+          <p class="fine">
+            En envoyant ce formulaire, vous acceptez d’être recontacté.
+            Détails : <a href="confidentialite.html">politique de confidentialité</a>.
+          </p>
+
+          <div class="fine" id="status" aria-live="polite"></div>
+        </form>
+
+        <p style="margin-top:1rem;color:var(--muted)">
+          Ou email direct : <strong id="mail"></strong>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" style="text-align:center">
+    <div style="font-weight:950;color:#e2e8f0;letter-spacing:-.5px">CAMALA — Externalisation marchés publics</div>
+    <div class="footerLinks">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a id="footerMail" href="#">Contact</a>
+    </div>
+    <p style="margin-top:1rem">© <span id="year"></span> — Tous droits réservés.</p>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie">
+  <div class="cookieRow">
+    <p><strong>Cookies :</strong> Ce site n’installe pas de cookies de suivi/marketing. Un stockage local peut mémoriser l’affichage de ce message.
+      <a href="cookies.html" style="text-decoration:underline">En savoir plus</a>
+    </p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-mini btn-ghost" id="later" type="button">Plus tard</button>
+      <button class="btn btn-mini btn-dark" id="ok" type="button">OK</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Form action + email
+  const form = document.getElementById("leadForm");
+  form.action = SETTINGS.formAction;
+  document.getElementById("mail").textContent = SETTINGS.email;
+
+  document.getElementById("footerMail").href = `mailto:${SETTINGS.email}`;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile nav
+  const hamb = document.getElementById("hamb");
+  const navLinks = document.getElementById("navLinks");
+  hamb.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("active");
+    hamb.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // Cookie info only
+  const key = "camala_cookie_notice_v1";
+  const cookie = document.getElementById("cookie");
+  if (!localStorage.getItem(key)) cookie.style.display = "block";
+  document.getElementById("ok").addEventListener("click", () => { localStorage.setItem(key,"ok"); cookie.style.display="none"; });
+  document.getElementById("later").addEventListener("click", () => { cookie.style.display="none"; });
+
+  // Little UX status
+  const status = document.getElementById("status");
+  form.addEventListener("submit", () => { status.textContent = "Envoi en cours…"; });
+</script>
+</body>
+</html>

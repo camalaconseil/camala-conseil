@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <title>FAQ | Camala</title>
+  <meta name="description" content="FAQ Camala : réponses aux questions fréquentes sur l’externalisation des marchés publics pour TPE." />
+  <link rel="canonical" href="https://votre-domaine.fr/faq.html" />
+
+  <style>
+    :root{--primary:#0f172a;--accent:#f59e0b;--text:#0f172a;--muted:#475569;--bg:#f8fafc;--white:#ffffff;--radius:18px;--shadow:0 18px 50px rgba(2,6,23,.10);--shadow2:0 10px 28px rgba(2,6,23,.08);--max:1160px;--space:4.8rem;}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+    body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans","Helvetica Neue",sans-serif;color:var(--text);line-height:1.6;background:radial-gradient(900px 450px at 50% -5%, rgba(245,158,11,.12), transparent 60%), #fff;}
+    a{color:inherit;text-decoration:none} a:hover{color:var(--accent)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+    .section{padding:var(--space) 0}
+    .section-title{text-align:center;margin-bottom:2.6rem}
+    .section-title h2{font-size:2.35rem;letter-spacing:-.8px;margin-bottom:.75rem}
+    .section-title p{max-width:820px;margin:0 auto;color:var(--muted)}
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(2,6,23,.08);}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:14px}
+    .logo{font-weight:950;letter-spacing:-1px;font-size:1.35rem} .logo span{color:var(--accent)}
+    nav ul{list-style:none;display:flex;gap:18px;align-items:center} nav a{font-weight:900;color:var(--primary)}
+    .cta{display:flex;gap:10px;align-items:center}
+    .hamb{display:none;background:transparent;border:0;cursor:pointer;padding:10px;border-radius:12px;font-size:1.2rem}
+
+    .btn{display:inline-block;padding:12px 16px;border-radius:14px;font-weight:950;text-transform:uppercase;font-size:.82rem;letter-spacing:.6px;border:0;cursor:pointer;transition:.2s;white-space:nowrap}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 24px rgba(245,158,11,.25)}
+    .btn-primary:hover{background:#d97706;transform:translateY(-2px)}
+    .ctaBox{background:linear-gradient(135deg, rgba(245,158,11,.12), rgba(15,23,42,.04));border:1px solid rgba(2,6,23,.06);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.8rem;text-align:center;margin-top:2rem}
+    .ctaBox p{color:var(--muted);max-width:820px;margin:0 auto 1rem}
+
+    .faqwrap{max-width:900px;margin:0 auto}
+    .faq-item{background:#fff;border:1px solid rgba(2,6,23,.06);border-radius:var(--radius);box-shadow:var(--shadow2);padding:0 18px;margin-bottom:12px}
+    .faq-q{width:100%;background:transparent;border:0;padding:16px 0;display:flex;justify-content:space-between;gap:14px;cursor:pointer;font-weight:950;color:var(--primary);text-align:left}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;color:var(--muted)}
+    .faq-a p{padding-bottom:16px}
+    .faq-item.active .faq-a{max-height:500px}
+    .chev{transition:transform .2s ease}
+    .faq-item.active .chev{transform:rotate(180deg)}
+
+    footer{background:linear-gradient(180deg,#0b1224,#0f172a);color:#94a3b8;padding:2.6rem 0;font-size:.95rem}
+    .footerLinks{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:.8rem}
+    footer a{color:#cbd5e1;text-decoration:underline}
+
+    @media (max-width:768px){
+      nav ul{display:none;position:absolute;top:78px;left:0;right:0;background:rgba(255,255,255,.98);padding:16px 18px;flex-direction:column;gap:14px;border-bottom:1px solid rgba(2,6,23,.06);}
+      nav ul.active{display:flex} .hamb{display:block}
+    }
+  </style>
+</head>
+
+<body>
+<script>
+  const SETTINGS = { email: "camala.conseil@gmail.com" };
+</script>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html" aria-label="Accueil">CAMALA<span>.</span></a>
+
+    <nav aria-label="Navigation principale">
+      <ul id="navLinks">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="offre.html">Offre</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="mentions-legales.html">Légal</a></li>
+      </ul>
+    </nav>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="index.html#contact">Échanger</a>
+      <button class="hamb" id="hamb" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </div>
+</header>
+
+<main style="padding-top:78px">
+  <section class="section">
+    <div class="container faqwrap">
+      <div class="section-title">
+        <h2>FAQ</h2>
+        <p>Les questions qu’on te pose (et que tu te poses). Réponses nettes, sans poudre de perlimpinpin.</p>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Faites-vous le chiffrage ? <span class="chev">⌄</span></button>
+        <div class="faq-a"><p>Non. Tu gardes la main sur tes prix et tes marges. On intègre tes pièces financières au dossier.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Intervenez-vous partout en France ? <span class="chev">⌄</span></button>
+        <div class="faq-a"><p>Oui, grâce à la dématérialisation. On peut bosser à distance sans perdre en qualité.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Est-ce rentable pour une TPE ? <span class="chev">⌄</span></button>
+        <div class="faq-a"><p>Ça dépend de la sélection. La rentabilité vient du Go/No-Go + d’un mémoire technique solide, pas du volume de réponses.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Sous quel délai peut-on démarrer ? <span class="chev">⌄</span></button>
+        <div class="faq-a"><p>Très vite : on met la veille en place rapidement, et on attaque le premier dossier dès validation.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button">Qu’est-ce que vous avez besoin de moi ? <span class="chev">⌄</span></button>
+        <div class="faq-a"><p>Tes éléments entreprise (Kbis, attestations, références) + ton chiffrage. Le reste, on s’en occupe.</p></div>
+      </div>
+
+      <div class="ctaBox">
+        <h3>Une question spécifique ?</h3>
+        <p>Tu me l’écris, je réponds (et si je ne peux pas t’aider, je te le dis).</p>
+        <a class="btn btn-primary" href="index.html#contact">Contacter Camala</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container" style="text-align:center">
+    <div style="font-weight:950;color:#e2e8f0;letter-spacing:-.5px">CAMALA — Externalisation marchés publics</div>
+    <div class="footerLinks">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="cookies.html">Cookies</a>
+      <a id="footerMail" href="#">Contact</a>
+    </div>
+    <p style="margin-top:1rem">© <span id="year"></span> — Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("footerMail").href = `mailto:${SETTINGS.email}`;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const hamb = document.getElementById("hamb");
+  const navLinks = document.getElementById("navLinks");
+  hamb.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("active");
+    hamb.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.querySelector(".faq-q").addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+</script>
+</body>
+</html>
